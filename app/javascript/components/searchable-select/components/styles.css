@@ -1,0 +1,10 @@
+/* Copyright (c) 2014 - 2023 UNICEF. All rights reserved. */
+
+.listbox {
+  box-sizing: border-box;
+
+  & ul {
+    padding: 0;
+    margin: 0;
+  }
+}

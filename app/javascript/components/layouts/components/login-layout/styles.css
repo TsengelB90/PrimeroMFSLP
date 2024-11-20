@@ -1,0 +1,194 @@
+/* Copyright (c) 2014 - 2023 UNICEF. All rights reserved. */
+
+.gbv {
+  border: 1px solid var(--c-purple);
+  background-color: var(--c-purple);
+}
+
+.mrm {
+  border: 1px solid var(--c-blue);
+  background-color: var(--c-blue);
+}
+
+.cpims {
+  border: 1px solid var(--c-orange);
+  background-color: var(--c-orange);
+}
+
+.cp {
+  border: 1px solid var(--c-blue);
+  background-color: var(--c-blue);
+}
+
+:global html, :global body {
+  height: var(--doc-height, 100vh);
+  height: 100dvh;
+}
+
+.primeroBackground {
+  height: var(--doc-height, 100vh);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  background: var(--c-login-background-gradient-start);
+  background: linear-gradient(108deg, var(--c-login-background-gradient-start) 0%, var(--c-login-background-gradient-end) 100%);
+}
+
+.primeroBackgroundImage {
+  background: center/70% no-repeat var(--c-login-background-image), linear-gradient(108deg, var(--c-login-background-gradient-start) 0%, var(--c-login-background-gradient-end) 100%);
+}
+
+.primeroBackgroundImageDemo {
+  background: center/70% no-repeat var(--c-login-background-image), repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0, .05) 10px, rgba(0,0,0,.05) 20px), linear-gradient(108deg, var(--c-login-background-gradient-start) 0%, var(--c-login-background-gradient-end) 100%);
+}
+
+.demoBackground {
+  background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0, .05) 10px, rgba(0,0,0,.05) 20px), linear-gradient(108deg, var(--c-login-background-gradient-start) 0%, var(--c-login-background-gradient-end) 100%);
+}
+
+.content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.authContainer {
+  flex-direction: column;
+  gap: var(--sp-2);
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.auth {
+  border-radius: 15px;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
+  background-color: var(--c-white);
+  display: flex;
+  width: 56em;
+}
+
+.formContainer {
+  flex: 1 1 50%;
+
+  & h1 {
+    margin: 0;
+  }
+}
+
+.form {
+  padding: 3em;
+}
+
+.loginHeader div {
+  margin: 0.75em 1em 1.55em 0;
+
+  & img {
+    width: 118px;
+    margin-left: 8px;
+  }
+}
+
+.noLogosWidth {
+  width: 35%;
+}
+
+.loginLogo {
+  display: flex;
+  flex: 1 1 50%;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.02)
+    ),
+    linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(240, 240, 240, 0.5));
+  box-shadow: inset 5px 0px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 0px 15px 15px 0px;
+}
+
+.hideLoginLogo {
+  display: none;
+}
+
+.loginLogo > div {
+  height: 100%;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.footer {
+  font-size: var(--fs-12);
+  flex-shrink: 0;
+  padding: var(--sp-1);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+
+  & > div:first-of-type {
+    flex: 1;
+  }
+}
+
+.footer button {
+  background: var(--c-login-translations-button-background);
+  color: var(--c-login-translations-button-text);
+  width: 260px;
+}
+
+.footer button,
+.footer a {
+  font-size: var(--fs-13);
+  color: var(--c-login-translations-button-text);
+}
+
+.footer button,
+.footer button > svg {
+  color: var(--c-login-translations-button-text);
+}
+
+.footer .navLink {
+  color: var(--c-white);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-decoration: none;
+  padding: 1.3em 0.75em 0 0;
+}
+
+.footer .navLink span {
+  padding-left: 10px;
+}
+
+.footerContained {
+  flex-direction: column;
+}
+
+@media (max-width:600px) {
+  .loginLogo {
+    display: none;
+  }
+
+  .auth {
+    width: 90%;
+  }
+
+  .noLogosWidth {
+    width: 90%;
+  }
+}
+
+@media (min-width:600px) and (max-width:900px) {
+  .auth {
+    width: 90%;
+  }
+
+  .noLogosWidth {
+    width: 50%;
+  }
+}

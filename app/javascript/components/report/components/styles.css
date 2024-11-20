@@ -1,0 +1,11 @@
+/* Copyright (c) 2014 - 2023 UNICEF. All rights reserved. */
+
+.icon {
+  font-size: var(--fs-20);
+  margin: 0 5px 0 0 !important;
+  color: var(--c-blue) !important;
+
+  &:hover {
+    color: var(--c-blue) !important;
+  }
+}

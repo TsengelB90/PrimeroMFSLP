@@ -1,0 +1,4 @@
+---
+dependencies:
+- role: 'quoin.infrastructure.install_docker'
+  when: qi_install_telegraf_enable_docker

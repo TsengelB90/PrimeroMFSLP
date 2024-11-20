@@ -1,0 +1,54 @@
+/* Copyright (c) 2014 - 2023 UNICEF. All rights reserved. */
+
+.card {
+  margin-bottom: 24px;
+  flex: 1 1 auto;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.content {
+  padding: 0 !important;
+  margin-top: var(--sp-1);
+
+  & td,
+  & th {
+    padding: 6px 15px;
+  }
+}
+
+.title {
+  padding: 14px 16px 0 16px;
+
+  & h4 {
+    margin: 0;
+  }
+
+  & span {
+    font-weight: 900 !important;
+    font-size: var(--fs-20);
+  }
+}
+
+@media (min-width:600px) {
+  .content {
+    & table tr:last-child td {
+      border-bottom: none;
+    }
+
+    margin-top: var(--sp-2)
+  }
+}
+
+.cardLink {
+  text-decoration: none;
+  font-size: var(--fs-18);
+  font-weight: bold;
+  color: #231e1f;
+
+  &:hover {
+    color: var(--c-dark-grey);
+  }
+}

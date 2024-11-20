@@ -1,0 +1,18 @@
+// Copyright (c) 2014 - 2023 UNICEF. All rights reserved.
+
+import { namespaceActions } from "../../../../libs";
+
+import NAMESPACE from "./namespace";
+
+export default namespaceActions(NAMESPACE, [
+  "FETCH_CODE_OF_CONDUCT",
+  "FETCH_CODE_OF_CONDUCT_STARTED",
+  "FETCH_CODE_OF_CONDUCT_FINISHED",
+  "FETCH_CODE_OF_CONDUCT_SUCCESS",
+  "FETCH_CODE_OF_CONDUCT_FAILURE",
+  "SAVE_CODE_OF_CONDUCT",
+  "SAVE_CODE_OF_CONDUCT_STARTED",
+  "SAVE_CODE_OF_CONDUCT_FINISHED",
+  "SAVE_CODE_OF_CONDUCT_SUCCESS",
+  "SAVE_CODE_OF_CONDUCT_FAILURE"
+]);

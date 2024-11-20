@@ -1,0 +1,4 @@
+---
+qi_install_docker_docker_package: 'docker-ce'
+qi_install_docker_daemon_json_content: |
+  { "log-driver": "journald" }

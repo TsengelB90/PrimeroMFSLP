@@ -1,0 +1,18 @@
+// Copyright (c) 2014 - 2023 UNICEF. All rights reserved.
+
+import * as constants from "./constants";
+
+describe("<LookupsList /> pages/admin/lookups-list", () => {
+  it("should have known constant", () => {
+    const clone = { ...constants };
+
+    expect(clone).to.be.an("object");
+
+    ["NAME", "TABLE_OPTIONS"].forEach(property => {
+      expect(clone).to.have.property(property);
+      delete clone[property];
+    });
+
+    expect(clone).to.be.empty;
+  });
+});

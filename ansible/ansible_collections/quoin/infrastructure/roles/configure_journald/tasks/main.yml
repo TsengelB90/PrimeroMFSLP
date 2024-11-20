@@ -1,0 +1,13 @@
+---
+- name: Create journal directory
+  file:
+    path: '/var/log/journal'
+    state: 'directory'
+  when: ansible_distribution == 'Debian'
+  become: true
+
+- name: Set journal directory permissions
+  command: '/bin/systemd-tmpfiles --create --prefix /var/log/journal'
+  notify: 'Restart journald'
+  when: ansible_distribution == 'Debian'
+  become: true

@@ -1,0 +1,18 @@
+/* Copyright (c) 2014 - 2023 UNICEF. All rights reserved. */
+
+.seeAll {
+  width: 100%;
+  text-align: center;
+  margin: var(--sp-1);
+}
+
+.seeAllLink {
+  color: var(--c-blue);
+  background-color: transparent;
+
+  &:hover, &:active {
+    background-color: transparent !important;
+    text-decoration: underline;
+    color: var(--c-blue-hover);
+  }
+}

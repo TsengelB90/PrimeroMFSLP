@@ -1,0 +1,7 @@
+---
+qi_install_python3_docker_docker_pip_virtualenv: '/opt/docker'
+qi_install_python3_docker_docker_pip_virtualenv_site_packages: yes
+qi_install_python3_docker_docker_package: 'docker'
+qi_install_python3_docker_pip_names:
+- 'pip'
+- 'distribute'

@@ -1,0 +1,11 @@
+# Copyright (c) 2014 - 2023 UNICEF. All rights reserved.
+
+test:
+  solr:
+    hostname: localhost
+    port: 8983
+    log_level: OFF
+    pid_dir: tmp/pids
+    path: /solr/test
+  auto_index_callback: after_commit
+  auto_remove_callback: after_commit

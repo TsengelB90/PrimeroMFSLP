@@ -1,0 +1,13 @@
+---
+- name: 'Ubuntu :: install AWS SSM Agent'
+  community.general.snap:
+    name: 'amazon-ssm-agent'
+    classic: yes
+  become: yes
+
+- name: 'Ubuntu :: start AWS SSM Agent'
+  ansible.builtin.service:
+    name: 'snap.amazon-ssm-agent.amazon-ssm-agent'
+    enabled: yes
+    state: 'started'
+  become: yes

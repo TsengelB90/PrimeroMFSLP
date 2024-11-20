@@ -1,0 +1,16 @@
+/* Copyright (c) 2014 - 2023 UNICEF. All rights reserved. */
+
+.clearButton {
+  color: var(--c-dark-brown);
+  font-weight: bold;
+}
+
+.fieldRow {
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid #efefef;
+}
+
+.fieldColumn {
+  /* flex: 1 1; */
+}

@@ -1,0 +1,92 @@
+/* Copyright (c) 2014 - 2023 UNICEF. All rights reserved. */
+
+.appBar {
+  z-index: 9999;
+  transition: $(
+    theme.transitions.create(
+      [ "margin",
+      "width" ],
+      {easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+      }
+    )
+  );
+}
+
+.appBarContent {
+  display: flex;
+  width: 100%;
+
+  & div:first-of-type {
+    flex: 1
+  }
+}
+
+.toolbar, .toolbar-demo {
+  background: var(--c-mobile-toolbar-background);
+  height: 2.5rem;
+  display: flex;
+
+  & > div {
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  & div {
+    display: flex;
+    align-items: center;
+  }
+
+  & > div div:first-of-type {
+    margin: 0;
+  }
+
+  & img {
+    width: auto;
+    margin: 0 1.125em;
+    height: 2.5em;
+  }
+
+  & .menuAlert {
+    position: absolute;
+    margin-left: 1em;
+  }
+}
+
+.hamburger {
+  color: var(--c-mobile-toolbar-hamburger-button)
+}
+
+.toolbar-demo {
+  background: repeating-linear-gradient(45deg, var(--c-light-grey), var(--c-light-grey) 10px, var(--c-white) 10px, var(--c-white) 20px);
+}
+
+.appBarShift {
+  width: calc(100% - 240px);
+  margin-left: 240px;
+  transition: $(
+    theme.transitions.create(
+      [ "margin",
+      "width" ],
+      {easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+      }
+    )
+  );
+}
+
+.demoText {
+  color: var(--c-dark-grey);
+  font-weight: bold;
+  text-transform: uppercase;
+  flex: 1;
+}
+
+@media (max-width: 900px) {
+  .toolbar, .toolbar-demo {
+    & img {
+      margin: 0;
+    }
+  }
+}

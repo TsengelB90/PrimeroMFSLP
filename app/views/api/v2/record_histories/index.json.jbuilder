@@ -1,0 +1,20 @@
+# frozen_string_literal: true
+
+# Copyright (c) 2014 - 2023 UNICEF. All rights reserved.
+
+json.data do
+  json.array! @record_histories do |record_history|
+    json.record_id @record.id
+    json.record_type PrimeroModelService.to_name(record_history.record_type).pluralize
+    json.datetime record_history.datetime&.iso8601
+    json.user_name record_history.user_name
+    json.action record_history.action
+    json.record_changes(record_history.record_changes.map { |key, value| { key => value } })
+  end
+end
+
+json.metadata do
+  json.total @total
+  json.per @per
+  json.page @page
+end

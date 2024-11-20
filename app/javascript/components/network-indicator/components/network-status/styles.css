@@ -1,0 +1,102 @@
+/* Copyright (c) 2014 - 2023 UNICEF. All rights reserved. */
+
+.container {
+  display: flex;
+  gap: var(--sp-1);
+}
+
+.icon {
+  flex: initial !important;
+  align-items: center;
+}
+
+.listIcon {
+  min-width: 2.5em;
+  color: inherit;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  line-height: .9em;
+  align-self: center;
+
+  & div:first-of-type {
+    font-weight: 800;
+    font-size: var(--fs-13);
+  }
+
+  & div:last-of-type {
+    font-size: var(--fs-9);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+  }
+}
+
+.online {
+  color: var(--c-solid-green)
+}
+
+.offline {
+  color: var(--c-gold-yellow)
+}
+
+.fieldMode {
+  color: var(--c-dark-grey);
+}
+
+.navLink {
+  text-decoration: none;
+  padding: 0 16px !important;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.listText {
+  font-size: var(--fs-14);
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.listTextSecondary {
+  font-size: var(--fs-9);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: inherit;
+}
+
+.listTextRoot {
+  cursor: default;
+}
+
+.containedMobile {
+  background: var(--c-white);
+  border: 1px solid var(--c-network-indicator-border);
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+.contained {
+  background: var(--c-white);
+  border: 1px solid var(--c-network-indicator-border);
+  margin: 0 8px;
+  width: 93%;
+  border-radius: 6px;
+}
+
+.containedMobileOffline {
+  border: 1px solid var(--c-solid-orange);
+}
+
+@media (max-width: 1200px) {
+  .navLink {
+    padding: 0 !important;
+  }
+
+  .contained {
+    padding: 0 !important;
+  }
+}

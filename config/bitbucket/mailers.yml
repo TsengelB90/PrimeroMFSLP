@@ -1,0 +1,8 @@
+# Copyright (c) 2014 - 2023 UNICEF. All rights reserved.
+
+test:
+  delivery_method: test
+  notifications:
+    host: 'localhost:3000'
+  default_options:
+    from: 'test-noreply@mail.example.com'

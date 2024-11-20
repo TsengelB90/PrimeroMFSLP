@@ -1,0 +1,23 @@
+---
+- name: 'Debian :: install apt-transport-https, ca-certificates, debian-keyring, debian-archive-keyring, and gnupg'
+  package:
+    name: '{{ item }}'
+    state: 'present'
+  with_items:
+  - 'apt-transport-https'
+  - 'ca-certificates'
+  - 'debian-keyring'
+  - 'debian-archive-keyring'
+  - 'gnupg'
+  become: yes
+
+- name: 'Debian :: install Vector APT key'
+  apt_key:
+    url: 'https://repositories.timber.io/public/vector/gpg.3543DB2D0A2BC4B8.key'
+  become: yes
+
+- name: 'Debian :: install Vector APT repository'
+  apt_repository:
+    filename: '/etc/apt/sources.list.d/timber-vector.list'
+    repo: 'deb https://repositories.timber.io/public/vector/deb/debian {{ ansible_distribution_release }} main'
+  become: yes

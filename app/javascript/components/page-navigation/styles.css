@@ -1,0 +1,18 @@
+/* Copyright (c) 2014 - 2023 UNICEF. All rights reserved. */
+
+.mobileNav {
+  top: 4em;
+  min-width: 220px;
+}
+
+.item, .selectedItem {
+  border-radius: .5em;
+
+  &:hover {
+    border-radius: .5em;
+  }
+}
+
+.selectedItem {
+   background-color: var(--c-light-blue-menu) !important;
+}

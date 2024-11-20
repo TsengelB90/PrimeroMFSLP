@@ -1,0 +1,7 @@
+---
+- name: 'restart Vector'
+  listen: 'restart_vector'
+  service:
+    name: 'vector'
+    state: 'restarted'
+  become: yes

@@ -1,0 +1,14 @@
+/* Copyright (c) 2014 - 2023 UNICEF. All rights reserved. */
+
+.cardShadow {
+  boxShadow: none
+}
+
+.optionsBox {
+  border-top: 1px solid var(--c-lightGrey);
+  border-radius: 0;
+
+  &:first-child: {
+    border-top: none;
+  }
+}

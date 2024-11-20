@@ -1,0 +1,37 @@
+---
+- include_tasks: 'family-debian.yml'
+  when: |
+    ansible_os_family == 'Debian'
+
+- name: 'install Telegraf'
+  package:
+    name: 'telegraf'
+    state: 'present'
+  become: yes
+
+- name: 'create the `/etc/telegraf/telegraf.conf` file'
+  copy:
+    dest: '/etc/telegraf/telegraf.conf'
+    content: |
+      {{ qi_install_telegraf_telegraf_conf_content }}
+  become: yes
+  notify: 'restart_telegraf'
+
+- name: 'add `telegraf` to the `docker` group'
+  user:
+    name: 'telegraf'
+    append: yes
+    groups:
+    - 'docker'
+  when: qi_install_telegraf_enable_docker
+  become: yes
+  notify: 'restart_telegraf'
+
+- meta: 'flush_handlers'
+
+- name: 'start Telegraf'
+  service:
+    name: 'telegraf'
+    enabled: yes
+    state: 'started'
+  become: yes

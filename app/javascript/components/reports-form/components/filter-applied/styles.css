@@ -1,0 +1,19 @@
+/* Copyright (c) 2014 - 2023 UNICEF. All rights reserved. */
+
+.filterContainer{
+  display: flex;
+  align-items: center;
+}
+
+.filterName {
+  display: flex;
+  flex: 1 1;
+}
+
+.filterActions {
+  display: flex;
+}
+
+.filterType {
+  padding: 0 1.5em;
+}

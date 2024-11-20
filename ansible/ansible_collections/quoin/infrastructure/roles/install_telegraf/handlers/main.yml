@@ -1,0 +1,7 @@
+---
+- listen: 'restart_telegraf'
+  service:
+    name: 'telegraf'
+    enabled: yes
+    state: 'restarted'
+  become: yes

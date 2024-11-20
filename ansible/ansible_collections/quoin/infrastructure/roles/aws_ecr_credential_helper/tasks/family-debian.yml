@@ -1,0 +1,24 @@
+---
+- name: 'Debian :: install `amazon-ecr-credential-helper`'
+  package:
+    name: 'amazon-ecr-credential-helper'
+  become: yes
+  when: |
+    ansible_distribution_major_version|int > 9
+
+- name: 'Debian :: Major Version Stretch or Earlier :: install `golang`'
+  package:
+    name: 'golang'
+  become: yes
+  when: |
+    ansible_distribution_major_version|int < 10
+
+- name: 'Debain :: Major Version Stretch or Earlier :: install amazon-ecr-credential-helper with go'
+  environment:
+    GOPATH: '{{ ansible_env.HOME }}/go'
+    GOBIN: '/usr/local/bin'
+  command: |
+    go get -u github.com/awslabs/amazon-ecr-credential-helper/ecr-login/cli/docker-credential-ecr-login
+  when: |
+    ansible_distribution_major_version|int < 10
+

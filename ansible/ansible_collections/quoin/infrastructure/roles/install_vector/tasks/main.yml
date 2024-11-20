@@ -1,0 +1,21 @@
+---
+- include_tasks: 'distribution-debian.yml'
+  when: |
+    ansible_distribution == 'Debian'
+
+- include_tasks: 'distribution-ubuntu.yml'
+  when: |
+    ansible_distribution == 'Ubuntu'
+
+- name: 'install Vector'
+  package:
+    name: 'vector'
+    state: 'present'
+  become: yes
+
+- name: 'start Vector'
+  service:
+    name: 'vector'
+    enabled: yes
+    state: 'started'
+  become: yes

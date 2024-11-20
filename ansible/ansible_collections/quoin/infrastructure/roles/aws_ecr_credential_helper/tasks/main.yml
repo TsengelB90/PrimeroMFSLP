@@ -1,0 +1,7 @@
+---
+- include_tasks: 'family-debian.yml'
+  when: |
+    ansible_os_family == 'Debian'
+
+- name: 'create the `~/.docker/config.json` file'
+  aws_ecr_credential_helper:

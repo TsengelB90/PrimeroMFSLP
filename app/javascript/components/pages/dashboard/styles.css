@@ -1,0 +1,41 @@
+/* Copyright (c) 2014 - 2023 UNICEF. All rights reserved. */
+
+.container {
+  max-width: 88em;
+}
+
+.flex {
+  display: flex;
+}
+
+.flexFlow {
+  display: flex;
+  flex-flow: column;
+}
+
+.flexGrow {
+  flex: 1 1 auto;
+}
+
+.title {
+  height: 28px;
+  font-family: var(--ff);
+  font-size: var(--fs-20);
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--c-solid-black);
+  margin: 25px 0 0 0;
+}
+
+.pageOptions {
+  display: inline;
+
+  & Button {
+    float: right;
+    color: var(--c-blue);
+    margin: 13px 0 0 0;
+  }
+}

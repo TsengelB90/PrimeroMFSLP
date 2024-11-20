@@ -1,0 +1,15 @@
+---
+- name: 'create and upgrade the Docker virtualenv'
+  pip:
+    virtualenv: '{{ qi_install_python3_docker_docker_pip_virtualenv }}'
+    virtualenv_site_packages: '{{ qi_install_python3_docker_docker_pip_virtualenv_site_packages }}'
+    name: '{{ qi_install_python3_docker_docker_package }}'
+  become: yes
+
+- name: 'install pip names into the Docker virtualenv'
+  pip:
+    virtualenv: '{{ qi_install_python3_docker_docker_pip_virtualenv }}'
+    virtualenv_site_packages: '{{ qi_install_python3_docker_docker_pip_virtualenv_site_packages }}'
+    name: '{{ qi_install_python3_docker_pip_names }}'
+    state: 'latest'
+  become: yes

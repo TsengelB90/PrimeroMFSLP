@@ -1,0 +1,11 @@
+---
+- name: 'Debian :: install the InfluxData APT key'
+  apt_key:
+    url: 'https://repos.influxdata.com/influxdb.key'
+  become: yes
+
+- name: 'Debian :: install the InfluxData APT repository'
+  apt_repository:
+    repo: |
+      deb https://repos.influxdata.com/{{ ansible_distribution|lower }} {{ ansible_distribution_release }} stable
+  become: yes

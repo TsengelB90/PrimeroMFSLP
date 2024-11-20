@@ -1,0 +1,12 @@
+---
+- name: 'restart Docker'
+  listen: 'restart_docker'
+  service:
+    name: 'docker'
+    state: 'restarted'
+  become: yes
+
+- name: 'reset the Ansible connection'
+  listen: 'reset_connection'
+  meta: 'reset_connection'
+  ignore_errors: yes

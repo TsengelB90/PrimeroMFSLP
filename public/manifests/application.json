@@ -1,0 +1,29 @@
+{
+  "../worker.js": "http://10.10.0.22:9000/worker.js",
+  "application.css": "http://10.10.0.22:9000/application.f84b317c.css",
+  "application.js": "http://10.10.0.22:9000/application.87e71bc55ed3efc10f59.js",
+  "entrypoints": {
+    "application": {
+      "assets": {
+        "js": [
+          "http://10.10.0.22:9000/vendor.87e71bc55ed3efc10f59.js",
+          "http://10.10.0.22:9000/application.87e71bc55ed3efc10f59.js"
+        ],
+        "css": [
+          "http://10.10.0.22:9000/application.f84b317c.css"
+        ]
+      }
+    }
+  },
+  "images/cpims-logo-white.png": "http://10.10.0.22:9000/images/ce2cee90c66900dd258f.png",
+  "images/cpims-logo.png": "http://10.10.0.22:9000/images/f074671335c78bad8eb0.png",
+  "images/cpims-pictorial.png": "http://10.10.0.22:9000/images/334a95dcda3581ff16ba.png",
+  "images/gbv-logo-white.png": "http://10.10.0.22:9000/images/040c0de55cc686d8d50e.png",
+  "images/gbv-logo.png": "http://10.10.0.22:9000/images/7c1909688f0063459d8d.png",
+  "images/gbv-pictorial.png": "http://10.10.0.22:9000/images/921d983a9ab9a9b92960.png",
+  "images/mrm-logo.png": "http://10.10.0.22:9000/images/6b2e7fb22df9aec2c083.png",
+  "images/primero-logo-white.png": "http://10.10.0.22:9000/images/fe02fdeee37a1a5f846e.png",
+  "images/primero-logo.png": "http://10.10.0.22:9000/images/708f8c1a610f8efd52fa.png",
+  "images/primero-pictorial.png": "http://10.10.0.22:9000/images/6786c00ca65cbae15998.png",
+  "vendor.js": "http://10.10.0.22:9000/vendor.87e71bc55ed3efc10f59.js"
+}

@@ -1,0 +1,11 @@
+---
+- name: 'install the docker-compose package'
+  pip:
+    virtualenv: '/opt/docker'
+    virtualenv_site_packages: yes
+    name:
+    # https://github.com/docker/docker-py/issues/3194
+    - 'docker==6.1.3'
+    - 'docker-compose'
+    state: 'latest'
+  become: yes

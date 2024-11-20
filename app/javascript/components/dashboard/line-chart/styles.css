@@ -1,0 +1,13 @@
+/* Copyright (c) 2014 - 2023 UNICEF. All rights reserved. */
+
+.Description {
+  font-size: var(--fs-13);
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #595951;
+  padding: 0 16px;
+  margin: 0;
+}
